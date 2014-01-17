@@ -19,3 +19,7 @@ end
 group :development, :test do
   gem "debugger"
 end
+
+group :test do
+  gem "rspec-rails"
+end
