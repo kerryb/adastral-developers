@@ -9,6 +9,7 @@ gem "sass-rails"
 gem "therubyracer", platforms: :ruby
 gem "turbolinks"
 gem "uglifier"
+gem "foundation-rails"
 
 group :doc do
   gem "sdoc", require: false
