@@ -5,6 +5,7 @@ gem "rails", "4.0.2"
 gem "coffee-rails"
 gem "jbuilder"
 gem "jquery-rails"
+gem "haml"
 gem "sass-rails"
 gem "therubyracer", platforms: :ruby
 gem "turbolinks"
