@@ -8,4 +8,11 @@
     = csrf_meta_tags
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
   %body
+    %nav.top-bar{"data-topbar" => true}
+      %ul.title-area
+        %li.name
+          %h1
+            %a{href: "/"} Adastral Developer Community
+    #header-image
+      =image_tag "header.png"
     = yield
