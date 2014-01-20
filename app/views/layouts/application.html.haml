@@ -15,7 +15,7 @@
             %h1
               %a{href: "/"} Adastral Developers
           %li.toggle-topbar.menu-icon
-            %a{href: "#"} Menu
+            %a{href: true}
         %section.top-bar-section
           %ul.right
             %li.divider
@@ -34,3 +34,4 @@
     #header-image
       =image_tag "header.png"
     = yield
+    = javascript_tag "$(document).foundation();"
