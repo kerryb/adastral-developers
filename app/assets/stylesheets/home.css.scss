@@ -1,0 +1,20 @@
+.whats-on {
+  line-height: 1.5em;
+
+  .event {
+    padding: 0.5em 0;
+    border-top: 1px solid #d8d8d8;
+
+    .date {
+      font-style: italic;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .date, .presenter, .link {
+      font-size: 80%;
+    }
+  }
+}
