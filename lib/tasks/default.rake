@@ -1,2 +1,2 @@
 desc "Run all the tests"
-task :default => [:rspec]
+task :default => %i[db:migrate db:test:prepare spec]
