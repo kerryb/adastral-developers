@@ -23,6 +23,8 @@ group :development, :test do
 end
 
 group :test do
+  gem "cucumber-rails", require: false
+  gem "database_cleaner"
   gem "rspec-rails"
   gem "simplecov", "~> 0.7.1", require: false # see https://github.com/colszowka/simplecov/issues/281
 end
