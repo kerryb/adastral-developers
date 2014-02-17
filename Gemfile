@@ -23,6 +23,7 @@ end
 
 group :test do
   gem "rspec-rails"
+  gem "simplecov", "~> 0.7.1", require: false # see https://github.com/colszowka/simplecov/issues/281
 end
 
 group :production do
