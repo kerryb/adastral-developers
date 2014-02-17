@@ -4,15 +4,16 @@ ruby "2.1.0"
 gem "rails", "4.0.2"
 
 gem "coffee-rails"
+gem "foundation-rails"
+gem "haml"
 gem "jbuilder"
 gem "jquery-rails"
-gem "haml"
+gem "pg" # for heroku/production
 gem "sass-rails"
 gem "sqlite3"
 gem "therubyracer", platforms: :ruby
 gem "turbolinks"
 gem "uglifier"
-gem "foundation-rails"
 
 group :doc do
   gem "sdoc", require: false
