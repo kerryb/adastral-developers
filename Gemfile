@@ -8,6 +8,7 @@ gem "jbuilder"
 gem "jquery-rails"
 gem "haml"
 gem "sass-rails"
+gem "sqlite3"
 gem "therubyracer", platforms: :ruby
 gem "turbolinks"
 gem "uglifier"
