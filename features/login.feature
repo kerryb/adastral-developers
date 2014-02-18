@@ -4,3 +4,8 @@ Feature: Login
     Given I am not logged in
     When I visit the site
     Then I should see the home page
+
+  @wip
+  Scenario: Log in
+    When I log in
+    Then I should see my name in the navbar

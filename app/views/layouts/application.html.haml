@@ -18,6 +18,9 @@
             %a{href: true}
         %section.top-bar-section
           %ul.right
+            %li.divider
+            %li
+              = link_to "Log in", new_session_path
     #header-image
       =image_tag "header.png"
     = yield
