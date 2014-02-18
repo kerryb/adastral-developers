@@ -4,6 +4,7 @@ ruby "2.1.0"
 gem "rails", "4.0.2"
 
 gem "coffee-rails"
+gem "foundation-icons-sass-rails"
 gem "foundation-rails"
 gem "haml"
 gem "jbuilder"
