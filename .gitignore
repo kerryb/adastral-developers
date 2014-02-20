@@ -16,4 +16,3 @@
 /tmp
 public/assets
 coverage
-secret_token.rb
