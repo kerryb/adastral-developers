@@ -23,4 +23,11 @@ describe ApplicationHelper do
       end
     end
   end
+
+  describe "#omniauth_callback" do
+    it "returns the appropriate callback path for the default strategy" do
+      Rails.configuration.default_omniauth_strategy = "foo"
+      expect(helper.omniauth_callback).to eq "/auth/foo/callback" 
+    end
+  end
 end

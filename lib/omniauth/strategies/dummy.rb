@@ -1,6 +1,6 @@
 module OmniAuth
   module Strategies
-    class Owa
+    class Dummy
       include OmniAuth::Strategy
 
       info do
