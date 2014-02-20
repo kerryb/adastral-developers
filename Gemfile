@@ -11,9 +11,7 @@ gem "jbuilder"
 gem "jquery-rails"
 gem "omniauth"
 gem "omniauth-owa"
-gem "pg" # for heroku/production
 gem "sass-rails"
-gem "sqlite3"
 gem "therubyracer", platforms: :ruby
 gem "turbolinks"
 gem "uglifier"
@@ -24,6 +22,7 @@ end
 
 group :development, :test do
   gem "debugger"
+  gem "sqlite3"
 end
 
 group :test do
@@ -35,5 +34,6 @@ group :test do
 end
 
 group :production do
+  gem "pg"
   gem "rails_12factor"
 end
