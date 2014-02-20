@@ -1,20 +1,15 @@
 =form_for :login, url: omniauth_callback do
   .panel
     .row
-      .small-centered.small-12.medium-7.large-5.columns
-        .alert-box.secondary.radius
-          %i.fi-alert
-          Oh, by the way, this doesn't actually work yet.
-    .row
       .small-centered.small-12.medium-4.large-3.columns
         %label
           EIN
-          %input{type: "text", placeholder: "801234567"}
+          %input{type: "text", name: "uid", placeholder: "801234567"}
     .row
       .small-centered.small-12.medium-4.large-3.columns
         %label
           IUSER password
-          %input{type: "password", placeholder: "secret"}
+          %input{type: "password", name: "password", placeholder: "secret"}
     .row
       .small-centered.small-12.medium-4.large-3.columns
         %input.button.small.radius{type: "submit", value: "Log in"}

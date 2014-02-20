@@ -27,5 +27,5 @@ AdastralDevelopers::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.default_omniauth_strategy = "dummy"
+  config.default_omniauth_strategy = "owa"
 end

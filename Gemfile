@@ -10,6 +10,7 @@ gem "haml"
 gem "jbuilder"
 gem "jquery-rails"
 gem "omniauth"
+gem "omniauth-owa"
 gem "pg" # for heroku/production
 gem "sass-rails"
 gem "sqlite3"
