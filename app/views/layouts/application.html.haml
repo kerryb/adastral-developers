@@ -12,14 +12,17 @@
         %ul.title-area
           %li.name.active
             %h1
-              %a{href: "/"} Adastral Developers
+              =link_to "Adastral Developers", root_path
           %li.toggle-topbar.menu-icon
             %a{href: true}
         %section.top-bar-section
           %ul.right
             %li.divider
             %li
-              = link_to "Log in", new_session_path
+              -if logged_in?
+                = link_to current_user.name, ""
+              -else
+                = link_to "Log in", login_path
     #header-image
       =image_tag "header.png"
     = yield

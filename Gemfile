@@ -9,6 +9,7 @@ gem "foundation-rails"
 gem "haml"
 gem "jbuilder"
 gem "jquery-rails"
+gem "omniauth"
 gem "pg" # for heroku/production
 gem "sass-rails"
 gem "sqlite3"
@@ -27,6 +28,7 @@ end
 group :test do
   gem "cucumber-rails", require: false
   gem "database_cleaner"
+  gem "factory_girl"
   gem "rspec-rails"
   gem "simplecov", "~> 0.7.1", require: false # see https://github.com/colszowka/simplecov/issues/281
 end
