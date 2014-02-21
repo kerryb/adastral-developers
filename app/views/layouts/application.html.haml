@@ -25,5 +25,13 @@
                 = link_to "Log in", login_path
     #header-image
       =image_tag "header.png"
+      - if flash[:alert]
+        .row
+          .small-12.columns
+            .alert-box.alert.radius
+              %i.fi-alert
+              = flash[:alert]
+              %a.close{href: "#"} &times;
+
     = yield
     = javascript_include_tag "application", "data-turbolinks-track" => true

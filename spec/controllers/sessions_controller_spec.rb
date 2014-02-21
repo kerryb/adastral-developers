@@ -25,4 +25,17 @@ describe SessionsController do
       expect(response).to redirect_to :root
     end
   end
+
+  describe "#failure" do
+    before { post :failure, message: "invalid_credentials" }
+
+    it "puts a message in the flash" do
+      expect(flash[:alert]).to eq "Failed to log in (invalid credentials)"
+    end
+
+    it "redirects to the login page" do
+      post :failure
+      expect(response).to redirect_to :login
+    end
+  end
 end
