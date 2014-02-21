@@ -18,9 +18,12 @@
         %section.top-bar-section
           %ul.right
             %li.divider
-            %li
+            %li.has-dropdown.not-click
               -if logged_in?
                 = link_to current_user.name, ""
+                %ul.dropdown
+                  %li
+                    = link_to "Log out", logout_path
               -else
                 = link_to "Log in", login_path
     #header-image

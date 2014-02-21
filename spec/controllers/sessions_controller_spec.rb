@@ -27,15 +27,28 @@ describe SessionsController do
   end
 
   describe "#failure" do
-    before { post :failure, message: "invalid_credentials" }
-
     it "puts a message in the flash" do
+      post :failure, message: "invalid_credentials"
       expect(flash[:alert]).to eq "Failed to log in (invalid credentials)"
     end
 
     it "redirects to the login page" do
       post :failure
       expect(response).to redirect_to :login
+    end
+  end
+
+  describe "#destroy" do
+    before { session[:user] = FactoryGirl.build :user }
+
+    it "removes the user from the session" do
+      get :destroy
+      expect(session).not_to have_key(:user)
+    end
+
+    it "redirects to the home page" do
+      get :destroy
+      expect(response).to redirect_to :root
     end
   end
 end

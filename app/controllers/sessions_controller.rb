@@ -11,4 +11,9 @@ class SessionsController < ApplicationController
     message = params.fetch(:message, "").humanize.downcase
     redirect_to :login, alert: "Failed to log in (#{message})"
   end
+
+  def destroy
+    session.delete :user
+    redirect_to :root
+  end
 end
