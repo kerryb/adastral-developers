@@ -1,4 +1,5 @@
 AdastralDevelopers::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   root "pages#show", page: "home"
   resource :session, only: [:create]
 

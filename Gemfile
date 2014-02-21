@@ -11,6 +11,7 @@ gem "jbuilder"
 gem "jquery-rails"
 gem "omniauth"
 gem "omniauth-owa"
+gem "rails_admin"
 gem "sass-rails"
 gem "therubyracer", platforms: :ruby
 gem "turbolinks"

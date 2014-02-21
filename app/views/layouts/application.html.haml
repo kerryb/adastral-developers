@@ -18,6 +18,10 @@
         %section.top-bar-section
           %ul.right
             %li.divider
+            -if logged_in? && current_user.admin
+              %li
+                = link_to "Admin", "/admin"
+            %li.divider
             -if logged_in?
               %li
                 = image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest current_user.email}?s=45&d=retro", alt: current_user.email
