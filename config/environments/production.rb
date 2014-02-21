@@ -79,4 +79,6 @@ AdastralDevelopers::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.default_omniauth_strategy = "owa"
+
+  config.middleware.use :ForceSSL
 end
