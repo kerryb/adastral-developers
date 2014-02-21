@@ -30,7 +30,7 @@
               %li
                 = link_to "Log in", login_path
     #header-image
-      =image_tag "header.png"
+      =image_tag "header-small.png", data: {interchange: "[#{image_path 'header-small.png'}, (small)], [#{image_path 'header-medium.png'}, (medium)], [#{image_path 'header-large.png'}, (large)]".html_safe}
       - if flash[:alert]
         .row
           .small-12.columns
