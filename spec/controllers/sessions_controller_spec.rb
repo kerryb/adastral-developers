@@ -2,7 +2,7 @@ require "rails_spec_helper"
 
 describe SessionsController do
   describe "#create" do
-    let(:user) { double :user }
+    let(:user) { double :user, id: 123 }
 
     before do
       User.stub create_or_update_with_omniauth_hash: user
@@ -15,9 +15,9 @@ describe SessionsController do
       expect(User).to have_received(:create_or_update_with_omniauth_hash).with auth_hash
     end
 
-    it "puts the user in the session" do
+    it "puts the user ID in the session" do
       post :create
-      expect(session[:user]).to eq user
+      expect(session[:user_id]).to eq 123
     end
 
     it "redirects to the home page" do
@@ -39,11 +39,11 @@ describe SessionsController do
   end
 
   describe "#destroy" do
-    before { session[:user] = FactoryGirl.build :user }
+    before { session[:user_id] = 123 }
 
-    it "removes the user from the session" do
+    it "removes the user ID from the session" do
       get :destroy
-      expect(session).not_to have_key(:user)
+      expect(session).not_to have_key(:user_id)
     end
 
     it "redirects to the home page" do

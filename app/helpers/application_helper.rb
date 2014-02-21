@@ -1,10 +1,10 @@
 module ApplicationHelper
   def current_user
-    session[:user]
+    @current_user ||= User.find session[:user_id]
   end
 
   def logged_in?
-    session[:user]
+    session.has_key? :user_id
   end
 
   def omniauth_callback

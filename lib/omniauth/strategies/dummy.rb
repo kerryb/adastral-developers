@@ -4,6 +4,10 @@ module OmniAuth
       include OmniAuth::Strategy
       OmniAuth.config.logger = Logger.new "/dev/null"
 
+      uid do
+        "fred"
+      end
+
       info do
         {
           name: "Fred Bloggs",
