@@ -26,7 +26,5 @@ module AdastralDevelopers
     # config.i18n.default_locale = :de
 
     config.i18n.enforce_available_locales = true
-
-    config.autoload_paths << "#{ config.root }/lib/middleware"
   end
 end
