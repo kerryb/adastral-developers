@@ -18,13 +18,16 @@
         %section.top-bar-section
           %ul.right
             %li.divider
-            %li.has-dropdown.not-click
-              -if logged_in?
+            -if logged_in?
+              %li
+                = image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest current_user.email}?s=45&d=retro", alt: current_user.email
+              %li.has-dropdown.not-click
                 = link_to current_user.name, ""
                 %ul.dropdown
                   %li
                     = link_to "Log out", logout_path
-              -else
+            -else
+              %li
                 = link_to "Log in", login_path
     #header-image
       =image_tag "header.png"

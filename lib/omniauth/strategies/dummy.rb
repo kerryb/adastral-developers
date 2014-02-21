@@ -7,6 +7,9 @@ module OmniAuth
       info do
         {
           name: "Fred Bloggs",
+          first_name: "Fred",
+          last_name: "Bloggs",
+          email: "fred.bloggs@example.com",
         }
       end
     end
