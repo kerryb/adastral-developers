@@ -51,8 +51,8 @@ describe ApplicationHelper do
       )
     end
 
-    it "defaults the size to 64" do
-      expect(helper.avatar_for user).to match(/\?s=64/)
+    it "defaults the size to 45" do
+      expect(helper.avatar_for user).to match(/\?s=45/)
     end
   end
 end

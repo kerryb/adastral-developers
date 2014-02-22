@@ -30,7 +30,7 @@
             %li.divider
             -if logged_in?
               %li
-                = avatar_for current_user, size: 45
+                = avatar_for current_user
               %li.has-dropdown.not-click
                 = link_to current_user.name, ""
                 %ul.dropdown

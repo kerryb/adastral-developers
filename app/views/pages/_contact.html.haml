@@ -1,0 +1,13 @@
+%dt= user.name
+%dd
+  .avatar
+    = avatar_for user
+  .details
+    .mail
+      %a{href: "mailto:#{user.email}"}
+        %i.fi-mail
+        = user.email
+    .twitter
+      %a{href: "https://twitter.com/#{twitter}"}
+        %i.fi-social-twitter
+        = "@#{twitter}"

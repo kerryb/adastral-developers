@@ -11,7 +11,7 @@ module ApplicationHelper
     "/auth/#{Rails.configuration.default_omniauth_strategy}/callback"
   end
 
-  def avatar_for user, size: 64
+  def avatar_for user, size: 45
     image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest user.email}?s=#{size}&d=retro".html_safe, alt: user.email
   end
 end

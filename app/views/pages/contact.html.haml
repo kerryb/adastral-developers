@@ -5,53 +5,9 @@
   event you&rsquo;re running, contact one of these people:
 
 %dl.contacts
-  %dt Kerry Buckley
-  %dd
-    .mail
-      %a{href: "mailto:kerry.buckley@bt.com"}
-        %i.fi-mail
-        kerry.buckley@bt.com
-    .twitter
-      %a{href: "https://twitter.com/kerryb"}
-        %i.fi-social-twitter
-        @kerryb
-  %dt Neil Winton
-  %dd
-    .mail
-      %a{href: "mailto:neil.winton@bt.com"}
-        %i.fi-mail
-        neil.winton@bt.com
-    .twitter
-      %a{href: "https://twitter.com/neilb"}
-        %i.fi-social-twitter
-        @ndwinton
-  %dt Anna Kennedy
-  %dd
-    .mail
-      %a{href: "mailto:anna.kennedy@bt.com"}
-        %i.fi-mail
-        anna.kennedy@bt.com
-    .twitter
-      %a{href: "https://twitter.com/yedennek"}
-        %i.fi-social-twitter
-        @yedennek
-  %dt Paul Moser
-  %dd
-    .mail
-      %a{href: "mailto:paul.moser@bt.com"}
-        %i.fi-mail
-        paul.moser@bt.com
-    .twitter
-      %a{href: "https://twitter.com/moserp"}
-        %i.fi-social-twitter
-        @moserp
-  %dt Adam Whittingham
-  %dd
-    .mail
-      %a{href: "mailto:adam.whittingham@bt.com"}
-        %i.fi-mail
-        adam.whittingham@bt.com
-    .twitter
-      %a{href: "https://twitter.com/AdamWhittingham"}
-        %i.fi-social-twitter
-        @AdamWhittingham
+  -#TODO: Get these from users in the database
+  = render "contact", user: User.new(name: "Kerry Buckley", first_name: "Kerry", last_name: "Buckley", email: "kerry.buckley@bt.com"), twitter: "kerryb"
+  = render "contact", user: User.new(name: "Anna Kennedy", first_name: "Anna", last_name: "Kennedy", email: "anna.kennedy@bt.com"), twitter: "yedennek"
+  = render "contact", user: User.new(name: "Neil Winton", first_name: "Neil", last_name: "Winton", email: "neil.winton@bt.com"), twitter: "ndwinton"
+  = render "contact", user: User.new(name: "Paul Moser", first_name: "Paul", last_name: "Moser", email: "paul.moser@bt.com"), twitter: "moserp"
+  = render "contact", user: User.new(name: "Adam Whittingham", first_name: "Adam", last_name: "Whittingham", email: "adam.whittingham@bt.com"), twitter: "AdamWhittingham"
