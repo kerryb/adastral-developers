@@ -17,5 +17,10 @@ FactoryGirl.define do
     last_name
     name { "#{first_name} #{last_name}" }
     email { "#{first_name}.#{last_name}@example.com".downcase }
+
+    factory :fred_bloggs do
+      first_name "Fred"
+      last_name "Bloggs"
+    end
   end
 end

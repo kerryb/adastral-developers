@@ -41,4 +41,18 @@ describe ApplicationHelper do
       expect(helper.omniauth_callback).to eq "/auth/foo/callback" 
     end
   end
+
+  describe "#avatar_for" do
+    let(:user) { FactoryGirl.build :fred_bloggs }
+
+    it "returns a gravatar image link" do
+      expect(helper.avatar_for user, size: 100).to eq(
+        %{<img alt="fred.bloggs@example.com" src="http://www.gravatar.com/avatar/c96ed9c232a9be4460f66ef650a82387?s=100&d=retro" />}
+      )
+    end
+
+    it "defaults the size to 64" do
+      expect(helper.avatar_for user).to match(/\?s=64/)
+    end
+  end
 end
