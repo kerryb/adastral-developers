@@ -19,7 +19,7 @@
           %ul.right
             %li.divider
             -if logged_in? && current_user.admin
-              %li
+              %li.admin
                 = link_to "Admin", "/admin"
             %li.divider
             -if logged_in?
