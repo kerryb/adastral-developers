@@ -1,11 +1,12 @@
 class SessionsController < ApplicationController
   def new
+    flash.keep :protected_path
   end
 
   def create
     user = User.create_or_update_with_omniauth_hash request.env["omniauth.auth"]
     session[:user_id] = user.id
-    redirect_to :root
+    redirect_to flash[:protected_path] || :root
   end
 
   def failure

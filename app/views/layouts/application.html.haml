@@ -16,6 +16,12 @@
           %li.toggle-topbar.menu-icon
             %a{href: true}
         %section.top-bar-section
+          %ul
+            %li.divider
+            %li
+              = link_to "Contact", page_path(page: "contact")
+            %li.divider
+        %section.top-bar-section
           %ul.right
             %li.divider
             -if logged_in? && current_user.admin
@@ -35,13 +41,44 @@
                 = link_to "Log in", login_path
     #header-image
       =image_tag "header-small.png", data: {interchange: "[#{image_path 'header-small.png'}, (small)], [#{image_path 'header-medium.png'}, (medium)], [#{image_path 'header-large.png'}, (large)]".html_safe}
-      - if flash[:alert]
-        .row
-          .small-12.columns
-            .alert-box.alert.radius
-              %i.fi-alert
-              = flash[:alert]
-              %a.close{href: "#"} &times;
 
-    = yield
+    .row
+      .column.small-12.medium-6.large-8
+        - if flash[:alert]
+          .row
+            .small-12.columns
+              .alert-box.alert.radius
+                %i.fi-skull
+                = flash[:alert]
+                %a.close{href: "#"} &times;
+        - if flash[:notice]
+          .row
+            .small-12.columns
+              .alert-box.radius
+                %i.fi-info
+                = flash[:notice]
+                %a.close{href: "#"} &times;
+        = yield
+      .column.small-12.medium-6.large-4
+        .panel.whats-on
+          %h2 What&rsquo;s on?
+          .event
+            .date 27 January, 2&ndash;4 pm
+            .title An Emergency Guide to Linux
+            .presenter Neil Winton
+            .link
+              %a{href: "#"} More details
+          .event
+            .date Tuesdays, 12.30&ndash;1.30 pm
+            .title Java dojo
+            .presenter Anna Kennedy &amp; Kerry Buckley
+            .link
+              %a{href: "#"} More details
+          .event
+            .date Wednesdays, 12.30&ndash;1.30 pm
+            .title Ruby dojo
+            .presenter Anna Kennedy &amp; Kerry Buckley
+            .link
+              %a{href: "#"} More details
+
     = javascript_include_tag "application", "data-turbolinks-track" => true

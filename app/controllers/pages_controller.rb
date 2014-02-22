@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def show
-    render action: params[:page]
+    page = params[:page]
+    render action: page
   end
 end

@@ -1,6 +1,17 @@
 require "rails_spec_helper"
 
 describe SessionsController do
+  describe "#new" do
+    it "leaves the protected path in the flash" do
+      get :new, {}, {}, protected_path: "/foo"
+      # This is ridiculous, but I can't find a better way. If you only call it
+      # one more time, the flash is still there and the test passes even if
+      # it's not explicitly kept.
+      2.times { get :new }
+      expect(flash[:protected_path]).to eq "/foo"
+    end
+  end
+
   describe "#create" do
     let(:user) { double :user, id: 123 }
 
@@ -20,9 +31,16 @@ describe SessionsController do
       expect(session[:user_id]).to eq 123
     end
 
-    it "redirects to the home page" do
-      post :create
-      expect(response).to redirect_to :root
+    it "redirects to the referrer path in the flash" do
+      post :create, {}, {}, protected_path: "/foo"
+      expect(response).to redirect_to "/foo"
+    end
+
+    context "when there is no referrer in the flash" do
+      it "redirects to the home page" do
+        post :create
+        expect(response).to redirect_to :root
+      end
     end
   end
 
