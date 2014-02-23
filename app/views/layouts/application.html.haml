@@ -16,12 +16,6 @@
           %li.toggle-topbar.menu-icon
             %a{href: true}
         %section.top-bar-section
-          %ul
-            %li.divider
-            %li
-              = link_to "Contact", page_path(page: "contact")
-            %li.divider
-        %section.top-bar-section
           %ul.right
             %li.divider
             -if logged_in? && current_user.admin
@@ -39,6 +33,11 @@
             -else
               %li
                 = link_to "Log in", login_path
+          %ul.left
+            %li.divider
+            %li
+              = link_to "Contact", page_path(page: "contact")
+            %li.divider
     #header-image
       =image_tag "header-small.png", data: {interchange: "[#{image_path 'header-small.png'}, (small)], [#{image_path 'header-medium.png'}, (medium)], [#{image_path 'header-large.png'}, (large)]".html_safe}
 
