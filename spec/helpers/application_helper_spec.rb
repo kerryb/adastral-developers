@@ -43,7 +43,7 @@ describe ApplicationHelper do
   end
 
   describe "#avatar_for" do
-    let(:user) { FactoryGirl.build :fred_bloggs }
+    let(:user) { build :fred_bloggs }
 
     it "returns a gravatar image link" do
       expect(helper.avatar_for user, size: 100).to eq(

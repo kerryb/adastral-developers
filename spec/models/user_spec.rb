@@ -31,7 +31,7 @@ describe User do
     end
 
     context "for an existing user" do
-      let!(:user) { FactoryGirl.create :user, uid: "42", first_name: "Freda", last_name: "Smith" }
+      let!(:user) { create :user, uid: "42", first_name: "Freda", last_name: "Smith" }
 
       it "updates the user record" do
         User.create_or_update_with_omniauth_hash auth_hash
