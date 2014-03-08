@@ -60,6 +60,13 @@ rescue LoadError
   task :cucumber do
     abort 'Cucumber rake task is not available. Be sure to install cucumber as a gem or plugin'
   end
+
+  namespace :cucumber do
+    desc 'cucumber:all rake task not available (cucumber not installed)'
+    task :all do
+      abort 'Cucumber rake task is not available. Be sure to install cucumber as a gem or plugin'
+    end
+  end
 end
 
 end
