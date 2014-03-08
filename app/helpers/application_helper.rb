@@ -12,6 +12,6 @@ module ApplicationHelper
   end
 
   def avatar_for user, size: 45
-    image_tag "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest user.email}?s=#{size}&d=retro".html_safe, alt: user.email
+    image_tag "//www.gravatar.com/avatar/#{Digest::MD5.hexdigest user.email}?s=#{size}&d=retro".html_safe, alt: user.email
   end
 end
